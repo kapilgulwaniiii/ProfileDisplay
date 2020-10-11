@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/Index.css">
+<script src = "JS/PD.js">  </script>
+
+</head>
+<body>
+<div id="grad1"></div>
+	<div class="container">
+       <h2 style="text-align:center" >Register Displaying Cards</h2>
+       <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+    </div>
+
+
+
+<div id="id01" class="modal">
+	<form class="modal-content animate" action="PHP/insertdata.php" method="post" enctype="multipart/form-data">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>  
+			<img src="images/ubiv.png" alt="Avatar" class="avatar">
+		</div>
+	
+	
+
+
+    <div class="container1">
+	
+      <label for="titleintro"><b>Title</b></label>
+      <input type="text" style="width:500px;" placeholder="" name="titleintro" required >
+      <label for="Desc"><b>Description</b></label>
+      <input type="text" style="width:500px;" placeholder="" name="Desc" required>
+    </div>
+	
+	
+	
+	<div class="container2">
+	
+			<input type="file" name="image" id="image">
+			<button type="submit" onclick="document.getElementById('id02').style.display='none'" class="register">Register</button>
+			<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>  
+    </div>
+  </form>
+</div>
+<?php
+
+require("connect.php");
+
+
+?>
+</body>
+</html>
