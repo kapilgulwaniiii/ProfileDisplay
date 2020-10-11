@@ -21,12 +21,6 @@ $pull->execute();
 
 $data=$pull->fetchAll();
 
-/*$cnt=$dbo->prepare("SELECT COUNT(*) FROM queue");
-$cnt->execute();
-$cdata=$pull->fetch();
-$xcnt=count($cdata);
-echo $xcnt;
-var_dump($cnt);*/
 $counter1=0;
 echo "</br>";
 echo "<div class=\"cardcollection\">";
@@ -72,59 +66,6 @@ setInterval(function() {
 </script>
 
 <p><?php echo "Remaining count is:".$xcount;?> </p>
-
-<!--<div class="row">
-  <div class="column">
-    <div class="card">
-      <h3>Profile 1</h3>
-      <p>Titile</p>
-      <p>Description</p>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <h3>Profile 2</h3>
-      <p>Titile</p>
-      <p>Description</p>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <h3>Profile 3</h3>
-      <p>Titile</p>
-      <p>Description</p>
-    </div>
-  </div>
-  
-  </div>
-  <br>
- <div class="row">
-  <div class="column">
-    <div class="card">
-      <h3>Profile 4</h3>
-      <p>Titile</p>
-      <p>Description</p>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <h3>Profile 5</h3>
-      <p>Titile</p>
-      <p>Description</p>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <h3>Profile 6</h3>
-      <p>Titile</p>
-      <p>Description</p>
-    </div>
-  </div>
- </div>
 
 </body>
 </html>

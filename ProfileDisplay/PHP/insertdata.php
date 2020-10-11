@@ -1,8 +1,7 @@
 <?php
 
 require("connect.php");
-#if (isset($_POST['Submit'])) {
-#move_uploaded_file($_FILES["image"]["tmp_name"],"uploads/".$_FILES["image"]["name"]);
+
 $folder ="../images/"; 
 
 $image = $_FILES['image']['name']; 
@@ -24,8 +23,7 @@ move_uploaded_file( $_FILES['image'] ['tmp_name'], $location);
 echo "Image Location :".$location;
 $dbo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
-#$push = $dbo->prepare("INSERT INTO MyGuests (firstname, lastname, email,Image_path)   VALUES ('".$_POST["fname"]."','".$_POST["lname"]."','".$_POST["email"]."','".$location."')");
-#$push->execute();
+
 echo $location;
 $push = $dbo->prepare("INSERT INTO queue (Title, Description, Image)   VALUES ('".$_POST["titleintro"]."','".$_POST["Desc"]."','".$location."')");
 $push->execute(); 
